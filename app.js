@@ -6,6 +6,7 @@ var server = restify.createServer({
 
 // Bundle Plugins
 server.use(restify.queryParser({mapParams: false}));
+server.use(restify.jsonp());
 
 server.listen(3000, function() {
   console.log('%s listening at %s', server.name, server.url);
