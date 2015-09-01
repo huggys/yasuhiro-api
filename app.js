@@ -1,4 +1,5 @@
-var restify = require('restify');
+var restify = require('restify'),
+    nonsense = require('./routes/nonsense.js');
 
 var server = restify.createServer({
   name: 'yasuhiro-api'
@@ -9,14 +10,9 @@ server.use(restify.queryParser({mapParams: false}));
 server.use(restify.jsonp());
 server.use(restify.gzipResponse());
 
-function getNonsenses(req, res, next) {
-  res.contentType = 'json';
-  res.send(200, {hello: 'world'});
-}
-
 server.listen(3000, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
 // Routes
-server.get('/nonsenses', getNonsenses);
+server.get('/nonsenses', nonsense.getNonsenses);
