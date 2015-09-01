@@ -4,6 +4,9 @@ var server = restify.createServer({
   name: 'yasuhiro-api'
 });
 
+// Bundle Plugins
+server.use(restify.queryParser({mapParams: false}));
+
 server.listen(3000, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
