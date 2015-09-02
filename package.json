@@ -5,6 +5,8 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "hiredis": "^0.4.1",
+    "redis": "^1.0.0",
     "restify": "^4.0.0"
   },
   "engines": {
