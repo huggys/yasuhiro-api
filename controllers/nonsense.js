@@ -3,6 +3,16 @@ var mongoose = require('mongoose'),
 
 exports.getNonsenses = function(req, res, next) {
   Nonsense.find({confidential: false}, function(err, nonsenses) {
-    res.send(200, nonsenses);
+    if (err) {
+      res.json(500, {
+        type: false,
+        date: 'Error occured: ' + err
+      });
+    } else {
+      res.json(200, {
+        type: !!nonsenses.length,
+        data: nonsenses
+      });
+    }
   });
 }
