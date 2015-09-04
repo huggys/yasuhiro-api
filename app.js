@@ -1,5 +1,5 @@
 var restify = require('restify'),
-    nonsense = require('./routes/nonsense.js');
+    nonsense = require('./controllers/nonsense.js');
 
 var server = restify.createServer({
   name: 'yasuhiro-api'
