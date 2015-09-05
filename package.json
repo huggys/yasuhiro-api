@@ -12,6 +12,7 @@
     "node": "0.12.7"
   },
   "devDependencies": {
-    "espower-babel": "^3.3.0"
+    "espower-babel": "^3.3.0",
+    "mocha": "^2.3.0"
   }
 }
