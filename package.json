@@ -10,5 +10,8 @@
   },
   "engines": {
     "node": "0.12.7"
+  },
+  "devDependencies": {
+    "espower-babel": "^3.3.0"
   }
 }
