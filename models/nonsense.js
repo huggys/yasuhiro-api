@@ -11,4 +11,4 @@ var nonsenseSchema = mongoose.Schema({
   }
 });
 
-mongoose.model('Nonsense', nonsenseSchema);
+exports.Nonsense = mongoose.model('Nonsense', nonsenseSchema);

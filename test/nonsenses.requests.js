@@ -1,4 +1,5 @@
 import restify from 'restify';
+import utils from './utils';
 
 let client = restify.createJsonClient({
   url: 'http://localhost:5000',
