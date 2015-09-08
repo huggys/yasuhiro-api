@@ -9,8 +9,10 @@ var server = restify.createServer({
 server.use(restify.queryParser({mapParams: false}));
 server.use(restify.jsonp());
 server.use(restify.gzipResponse());
+server.use(restify.bodyParser());
 
 // Routes
+server.post('/nonsenses', nonsense.createNonsense);
 server.get('/nonsenses', nonsense.getNonsenses);
 
 var port = process.env.PORT || 5000;
