@@ -8,7 +8,7 @@ exports.createNonsense = function(req, res, next) {
     if (err) {
       res.json(500, {
         type: false,
-        date: 'Error occured: ' + err
+        data: 'Error occured: ' + err
       });
     } else {
       res.json(201, {
@@ -24,7 +24,7 @@ exports.getNonsenses = function(req, res, next) {
     if (err) {
       res.json(500, {
         type: false,
-        date: 'Error occured: ' + err
+        data: 'Error occured: ' + err
       });
     } else {
       res.json(200, {
