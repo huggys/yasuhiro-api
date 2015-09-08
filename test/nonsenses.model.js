@@ -4,7 +4,15 @@ const Nonsense = require('../models/nonsense').Nonsense;
 
 describe('戯言 models', () => {
   describe('#create()', () => {
-    it('新しい戯言が登録されること', (done) => {
+    it('bodyが必須であること', (done) => {
+      Nonsense.create({}, (err, createdNonsense) => {
+        assert(err !== null);
+
+        done();
+      });
+    });
+
+    it('新しい戯言が登録できること', (done) => {
       let now = new Date(),
           nonsense = {
         body: 'hoge',

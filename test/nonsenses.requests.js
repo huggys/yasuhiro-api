@@ -8,7 +8,16 @@ let client = restify.createJsonClient({
 
 describe('戯言 API', () => {
   describe('POST /nonsenses', () => {
-    it('201が返ること', (done) => {
+    it('bodyを指定しないとErrorが発生すること', (done) => {
+      client.post('/nonsenses', (err, req, res, obj) => {
+        assert(obj.type === false);
+        assert(obj.data.lastIndexOf('Error occured', 0) !== -1);
+
+        done();
+      });
+    });
+
+    it('bodyを与えると201が返ること', (done) => {
       client.post('/nonsenses', {body: 'hoge'}, (err, req, res, obj) => {
         if (err) {
           throw new Error(err);
