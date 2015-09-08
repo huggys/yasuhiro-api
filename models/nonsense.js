@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var nonsenseSchema = mongoose.Schema({
-  body: String,
+  body: {
+    type: String,
+    required: true
+  },
   created_at: {
     type: Date,
     default: Date.now
