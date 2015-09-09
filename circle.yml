@@ -10,4 +10,5 @@ deployment:
 
 test:
   post:
-    - echo 'No test yet!'
+    - cp -r ./coverage $CIRCLE_ARTIFACTS
+    - coveralls < ./coverage/lcov.info

@@ -2,7 +2,8 @@
   "name": "yasuhiro-api",
   "version": "0.0.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "babel-node $(npm bin)/isparta cover --report text --report html --report lcov _mocha"
   },
   "dependencies": {
     "mongoose": "^4.1.5",
@@ -12,7 +13,10 @@
     "node": "0.12.7"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
+    "coveralls": "^2.11.4",
     "espower-babel": "^3.3.0",
+    "isparta": "^3.0.4",
     "mocha": "^2.3.0",
     "power-assert": "^1.0.0"
   }
