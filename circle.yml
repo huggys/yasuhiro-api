@@ -11,3 +11,4 @@ deployment:
 test:
   post:
     - cp -r ./coverage $CIRCLE_ARTIFACTS
+    - coveralls < ./coverage/lcov.info
