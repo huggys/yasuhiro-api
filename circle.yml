@@ -7,3 +7,7 @@ deployment:
     branch: master
     heroku:
       appname: yasuhiro-api
+
+test:
+  post:
+    - cp -r ./coverage $CIRCLE_ARTIFACTS
