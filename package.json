@@ -13,7 +13,7 @@
     "node": "0.12.7"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
     "coveralls": "^2.11.4",
     "espower-babel": "^3.3.0",
     "gulp": "^3.9.0",
