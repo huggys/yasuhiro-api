@@ -10,5 +10,8 @@
   "extends": "eslint:recommended",
   "globals": {
     "assert": true
+  },
+  "rules": {
+    "no-console": 1
   }
 }
