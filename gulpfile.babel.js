@@ -14,4 +14,8 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('default', ['lint']);
+gulp.task('default', () => {
+  gulp.watch(GLOB_SRC_FILES, () => {
+    gulp.run('lint');
+  });
+});
